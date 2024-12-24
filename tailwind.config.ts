@@ -12,6 +12,23 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["var(--font-kanit)", "sans-serif"],
+        serif: ["var(--font-fredoka)", "serif"],
+      },
+    },
+
+    screens: {
+      s: "520px",
+      sm: "640px",
+
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
     },
   },
   plugins: [],
