@@ -12,6 +12,7 @@ export const images = [
   {
     text: "Jake-Ford",
     image: image2,
+    description: "",
   },
   {
     text: "Ryan-Hale",

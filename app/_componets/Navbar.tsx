@@ -2,15 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { Kanit } from "next/font/google";
-
-const kanit = Kanit({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-kanit",
-});
+import { oswald } from "./Header";
+import { CartContext } from "../_context/CartContext";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -32,9 +27,10 @@ const Navbar = () => {
       text: "pricing",
     },
   ];
+  const { cart } = useContext(CartContext);
   return (
     <header
-      className={`nav-link relative mx-[120px] ${kanit.variable} font-sans text-xl`}
+      className={`nav-link relative mx-[10px] ${oswald.variable} font-sans text-xl lg:mx-[120px]`}
     >
       <div className="mr-4 flex flex-row items-center justify-between p-5 pr-8">
         <ul className="hidden flex-row gap-3 lg:flex">
@@ -88,13 +84,13 @@ const Navbar = () => {
           />
         </Link>
 
-        <p>Cart (1)</p>
+        <p>{`Cart (${cart})`}</p>
       </div>
 
       <nav
         className={`${
           show
-            ? "top-18 absolute left-0 z-10 flex w-full translate-y-0 flex-col items-center gap-4 border-b-8 border-r-8 border-gray-500 bg-[#fff9e5] p-14 transition-all duration-[0.7s] ease-in-out"
+            ? "top-18 absolute left-0 z-10 flex w-full translate-y-0 flex-col items-center gap-4 border-b-8 border-r-8 border-gray-500 bg-[#fff9e5] p-14 transition-all duration-[0.7s] ease-in-out lg:hidden"
             : "absolute z-10 flex w-full -translate-y-96 flex-col items-center border-r-8 border-gray-500 bg-[#fff9e5] transition-all duration-[0.5s] ease-in-out"
         }`}
       >

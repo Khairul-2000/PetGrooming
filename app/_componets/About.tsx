@@ -9,12 +9,12 @@ import { motion } from "motion/react";
 const About = () => {
   return (
     <div className="flex flex-col items-center justify-center overflow-hidden bg-[#fffbf1] py-[100px] text-center text-[#3f2e1f]">
-      <div className="mb-8 flex max-w-[500px] flex-col items-center justify-center space-y-5">
+      <div className="mb-8 flex max-w-[700px] flex-col items-center justify-center space-y-5">
         <p className="text-xl">about us</p>
-        <h1 className="font-extrabold">
+        <h1 className="text-6xl">
           Bunch of loving people with passion to pets
         </h1>
-        <p className="max-w-[350px] text-lg">
+        <p className="max-w-[360px] text-xl">
           Nam commodo suscipit quam. Nulla sit amet est. Aenean viverra rhoncus
           pede.
         </p>

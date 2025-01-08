@@ -14,53 +14,60 @@ const Services = () => {
     <div className="flex flex-col items-center justify-center bg-[#fffbf1] py-12 text-[#3f2e1f]">
       <div className="my-20 flex flex-col items-center justify-center">
         <div className="text-center">
-          <p>services</p>
-          <h1 className="font-extrabold">We can help your buddies</h1>
+          <p className="text-2xl">services</p>
+          <h1 className="text-6xl">We can help your buddies</h1>
         </div>
-        <div className="mx-auto my-12 flex flex-col items-center justify-center gap-8 lg:flex-row">
-          <div className="z-30 w-[500px] rounded-2xl bg-[#ffffff] p-4 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+        <div className="mx-auto my-12 flex flex-col flex-wrap items-center justify-center gap-8 xl:flex-row">
+          <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
             <div>
-              <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#a6c1e7]">
+              <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#a6c1e7]">
                 <CiHeart size={40} />
               </div>
 
-              <h1>Full grooming</h1>
-              <p>
+              <h1 className="mb-4">Full grooming</h1>
+              <p className="mb-4 text-xl">
                 A comprehensive service that includes a bath, haircut, nail
                 trimming, ear cleaning, and brushing for a fresh, clean look,
                 ensuring your pet feels their best.
               </p>
 
-              <Link href="/">read more</Link>
+              <Link href="/" className="text-xl">
+                read more
+              </Link>
             </div>
           </div>
-          <div className="z-30 w-[500px] rounded-lg bg-[#ffffff] p-4 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
-            <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#fdcb6e]">
+
+          <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#fdcb6e]">
               <FaBath size={40} />
             </div>
 
-            <h1>Full grooming</h1>
-            <p>
-              A comprehensive service that includes a bath, haircut, nail
-              trimming, ear cleaning, and brushing for a fresh, clean look,
-              ensuring your pet feels their best.
+            <h1 className="mb-4">Bath & Brush</h1>
+            <p className="mb-4 text-xl">
+              A soothing bath with pet-friendly shampoo, followed by brushing to
+              remove loose fur, prevent matting, and leave your pet looking
+              refreshed.
             </p>
 
-            <Link href="/">read more</Link>
+            <Link href="/" className="text-xl">
+              read more
+            </Link>
           </div>
-          <div className="z-30 w-[500px] rounded-lg bg-[#ffffff] p-4 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
-            <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#a6c1e7]">
+          <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#a6c1e7]">
               <FiScissors size={40} />
             </div>
 
-            <h1>Full grooming</h1>
-            <p>
-              A comprehensive service that includes a bath, haircut, nail
-              trimming, ear cleaning, and brushing for a fresh, clean look,
-              ensuring your pet feels their best.
+            <h1 className="mb-4">Nail Trimming</h1>
+            <p className="mb-4 text-xl">
+              Quick and gentle nail clipping to keep your pet’s paws healthy,
+              preventing overgrown nails from causing discomfort or issues
+              walking.
             </p>
 
-            <Link href="/">read more</Link>
+            <Link href="/" className="text-xl">
+              read more
+            </Link>
           </div>
         </div>
 

@@ -1,28 +1,38 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { motion } from "motion/react";
+import { Oswald } from "next/font/google";
+import { CartContext } from "../_context/CartContext";
+
+export const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-oswald",
+});
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const { setCart } = useContext(CartContext);
   return (
     <div>
-      <div className="my-20 flex flex-col items-center justify-center gap-4">
-        <div className="flex max-w-[500px] flex-col items-center justify-center gap-3 space-y-4">
-          <h1 className="text-center font-[Baloo] text-6xl font-extrabold text-[#3f2e1f]">
+      <div className="my-20 flex flex-col items-center justify-center gap-4 xl:flex-row">
+        <div className="flex max-w-[600px] flex-col items-center justify-center gap-3 space-y-4 text-left xl:items-start xl:justify-start">
+          <h1 className="text-center text-7xl font-extrabold text-[#3f2e1f] xl:text-left">
             Pamper your pet with expert care
           </h1>
-          <p className="text-center text-2xl text-[#3f2e1f]">
+          <p className="text-center text-2xl text-[#3f2e1f] xl:text-left">
             Providing expert care and personalized grooming for happy, healthy
             pets every time
           </p>
           <motion.button
             onHoverStart={() => setShow(true)}
             onHoverEnd={() => setShow(false)}
-            className="btn flex items-center justify-center gap-2 text-2xl"
+            onClick={() => setCart((prev) => prev + 1)}
+            className={`btn flex items-center justify-center gap-2 ${oswald.variable} font-sans`}
           >
             <Link href="/">Book appointement</Link>
             <motion.span animate={{ x: show ? 10 : 0 }}>
@@ -36,6 +46,7 @@ const Header = () => {
             alt="pet grooming"
             width={900}
             height={900}
+            className="lg:h-[700px] lg:w-[700px]"
           />
         </div>
       </div>
