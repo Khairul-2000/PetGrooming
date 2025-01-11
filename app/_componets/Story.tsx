@@ -51,7 +51,7 @@ const Story = () => {
             alt="team"
             width={700}
             height={700}
-            className="z-30 rounded-3xl"
+            className="z-30 rounded-3xl transition-all duration-[1s] ease-in-out hover:scale-110"
           />
         </div>
       </div>
