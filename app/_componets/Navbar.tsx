@@ -6,9 +6,11 @@ import { useContext, useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { oswald } from "./Header";
 import { CartContext } from "../_context/CartContext";
+import { motion } from "motion/react";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
+  const [ishover, setIshover] = useState(false);
   const links = [
     {
       href: "/",
@@ -41,17 +43,33 @@ const Navbar = () => {
               </Link>
             </div>
           ))}
-          <li className="group cursor-pointer">
+          <motion.div
+            onMouseEnter={() => setIshover(true)}
+            onMouseLeave={() => setIshover(false)}
+            className="relative cursor-pointer"
+          >
             other
-            <div className="absolute top-16 z-30 mt-2 hidden rounded-md bg-white p-4 group-hover:block">
-              <ul className="flex flex-col gap-2">
-                <li>contact</li>
-                <li>team</li>
-                <li>blog</li>
-                <li>legal</li>
-              </ul>
-            </div>
-          </li>
+            {ishover && (
+              <motion.div
+                className={`absolute -left-2 top-6 z-30 mt-2 rounded-md bg-white p-4`}
+              >
+                <ul className="flex flex-col gap-2">
+                  <li>
+                    <Link href="/contact">contact</Link>
+                  </li>
+                  <li>
+                    <Link href="/teams">teams</Link>
+                  </li>
+                  <li>
+                    <Link href="/blog">blog</Link>
+                  </li>
+                  <li>
+                    <Link href="/legal">legal</Link>
+                  </li>
+                </ul>
+              </motion.div>
+            )}
+          </motion.div>
         </ul>
 
         <div className="relative lg:hidden">
