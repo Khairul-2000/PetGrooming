@@ -4,6 +4,7 @@ import Navbar from "./_componets/Navbar";
 import { Fredoka } from "next/font/google";
 import CartContextContainer from "./_context/CartContext";
 import Footer from "./_componets/Footer";
+import Transition from "./_componets/Transition";
 
 const fredoka = Fredoka({
   subsets: ["latin"],

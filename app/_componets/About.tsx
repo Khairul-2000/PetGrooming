@@ -19,7 +19,7 @@ const About = () => {
           pede.
         </p>
         <button className="btn text-xl">
-          <Link href="/">about us</Link>
+          <Link href="/details">about us</Link>
         </button>
       </div>
 

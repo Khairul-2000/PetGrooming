@@ -76,7 +76,7 @@ const Services = () => {
           onHoverEnd={() => setShow(false)}
           className="btn flex items-center justify-center gap-2 text-2xl"
         >
-          <Link href="/">see all services</Link>
+          <Link href="/services">see all services</Link>
           <motion.span animate={{ x: show ? 10 : 0 }}>
             <GoArrowRight />
           </motion.span>
