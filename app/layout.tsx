@@ -4,7 +4,7 @@ import Navbar from "./_componets/Navbar";
 import { Fredoka } from "next/font/google";
 import CartContextContainer from "./_context/CartContext";
 import Footer from "./_componets/Footer";
-import Transition from "./_componets/Transition";
+import { AnimatePresence } from "framer-motion";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -31,8 +31,9 @@ export default function RootLayout({
           <CartContextContainer>
             <Navbar />
             <hr className="w-full" />
-
-            <main>{children}</main>
+            <AnimatePresence>
+              <main>{children}</main>
+            </AnimatePresence>
             <Footer />
           </CartContextContainer>
         </div>
