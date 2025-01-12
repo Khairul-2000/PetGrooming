@@ -51,7 +51,7 @@ const Navbar = () => {
             other
             {ishover && (
               <motion.div
-                className={`absolute -left-2 top-6 z-30 mt-2 rounded-md bg-white p-4`}
+                className={`absolute -left-4 top-6 z-30 mt-2 rounded-md bg-white p-6`}
               >
                 <ul className="flex flex-col gap-2">
                   <li>
