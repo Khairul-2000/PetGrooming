@@ -15,7 +15,8 @@ const Service = () => {
   return (
     <div className="mx-auto">
       <div className="bg-[#fffbf1] py-10">
-        <h1 className="text-center">Explore our services</h1>-
+        <h1 className="mt-[50px] text-center text-8xl">Explore our services</h1>
+        -
         <div className="mx-auto my-12 flex flex-col flex-wrap items-center justify-center gap-8 xl:flex-row">
           <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
             <div>
@@ -112,7 +113,7 @@ const Service = () => {
           />
           <Accordian
             title="Why Pet Grooming is a great template?"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed"
+            description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis veritatis quam eveniet, eos mollitia repellat. Fuga illo iusto eius dolores."
           />
           <Accordian
             title="What value Pet Grooming brings?"
