@@ -34,6 +34,7 @@ export default function RootLayout({
             <AnimatePresence>
               <main>{children}</main>
             </AnimatePresence>
+            <div className="h-[5px] w-full bg-gradient-to-r from-red-400 to-blue-500"></div>
             <Footer />
           </CartContextContainer>
         </div>
