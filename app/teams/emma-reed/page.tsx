@@ -18,14 +18,14 @@ const page = () => {
         <div className="my-[100px] w-[70vw]">
           <p className="mb-[200px]">about specialist</p>
 
-          <div>
-            <h1>Emma-Reed</h1>
-            <p>
+          <div className="flex flex-col items-start justify-center space-y-8">
+            <h1 className="text-7xl">Emma-Reed</h1>
+            <p className="max-w-[800px] text-2xl">
               Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero,
               non adipiscing dolor urna a orci. Vestibulum turpis sem, aliquet
               eget, lobortis pellentesque.
             </p>
-            <p>
+            <p className="text-xl font-normal">
               With years of experience in the pet care industry, this team
               member brings a deep passion for animals and an unwavering
               commitment to providing a stress-free, enjoyable grooming
@@ -37,7 +37,7 @@ const page = () => {
               temperament, ensuring a tailored and gentle experience for even
               the most anxious animals.
             </p>
-            <h2>Attention to detail is my motto</h2>
+            <h2 className="text-4xl">Attention to detail is my motto</h2>
             <p>
               Known for their exceptional attention to detail, this team member
               is dedicated to delivering top-notch grooming results that leave
@@ -48,7 +48,7 @@ const page = () => {
               task with the same level of care and professionalism.
             </p>
 
-            <p className="w-[40vw] rounded-xl bg-[#fdcb6e] p-10 py-[150x] text-center font-bold">
+            <p className="w-[50vw] rounded-xl bg-[#fdcb6e] p-10 py-[150x] text-center font-bold">
               Their goal is to create a positive, loving environment where pets
               can enjoy the grooming experience, and their dedication to
               excellence shines through in every service they provide.
