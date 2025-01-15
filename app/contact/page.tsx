@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import About from "../_componets/About";
 import Accordian from "../_componets/Accordian";
 import { RiMailSendLine } from "react-icons/ri";
@@ -11,7 +13,49 @@ import { CiLinkedin } from "react-icons/ci";
 import Transition from "../_componets/Transition";
 import Link from "next/link";
 
-const page = () => {
+const Contact = () => {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [messageShow, setMessageShow] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    fetch("https://formspree.io/f/mrbbdqwr", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formState),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setMessageShow(true);
+          setFormState({
+            name: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("Submission failed. Please check your connection.");
+      });
+  };
   return (
     <Transition>
       <div>
@@ -63,31 +107,54 @@ const page = () => {
               <CiLinkedin size={25} />
             </div>
           </div>
-          <div className="z-30 w-[600px] rounded-2xl bg-[#ffffff] p-10 shadow-lg transition-all duration-[0.8s] ease-in-out hover:shadow-black">
-            <form action="" className="flex flex-col justify-center space-y-5">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                className="rounded-lg border border-gray-500 bg-transparent p-4"
-                placeholder="Your name"
-              />
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="rounded-lg border border-gray-500 bg-transparent p-4"
-                placeholder="Email"
-              />
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                cols={30}
-                rows={10}
-                className="rounded-lg border border-gray-500 bg-transparent placeholder:p-4"
-                placeholder="I want to colaborate..."
-              />
-            </form>
+          <div className="z-30 w-[500px] rounded-2xl bg-[#ffffff] p-10 shadow-lg transition-all duration-[0.8s] ease-in-out hover:shadow-black">
+            {!messageShow ? (
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col justify-center space-y-5"
+              >
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formState.name}
+                  onChange={handleChange}
+                  className="rounded-lg border border-gray-500 bg-transparent p-4"
+                  placeholder="Your name"
+                  required
+                />
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                  className="rounded-lg border border-gray-500 bg-transparent p-4"
+                  placeholder="Email"
+                  required
+                />
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formState.message}
+                  onChange={handleChange}
+                  cols={30}
+                  rows={10}
+                  className="rounded-lg border border-gray-500 bg-transparent placeholder:p-4"
+                  placeholder="I want to colaborate..."
+                  required
+                />
+
+                <button type="submit" className="btn text-2xl">
+                  Submit
+                </button>
+              </form>
+            ) : (
+              <div>Thank you! Your submission has been received!</div>
+            )}
           </div>
         </div>
 
@@ -156,4 +223,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;
