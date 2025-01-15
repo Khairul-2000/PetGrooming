@@ -3,6 +3,7 @@ import Header from "./_componets/Header";
 import Section from "./_componets/Section";
 import Services from "./_componets/Services";
 import Story from "./_componets/Story";
+import Testimonial from "./_componets/Testimonial";
 import Transition from "./_componets/Transition";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         </Section>
         <Story />
         <Services />
+        <Testimonial />
       </Transition>
     </div>
   );
