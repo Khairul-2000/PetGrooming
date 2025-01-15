@@ -7,8 +7,8 @@ import { CartContext } from "../_context/CartContext";
 const Cart = () => {
   const { setShowCart } = useContext(CartContext);
   return (
-    <div className="absolute -right-8 top-7 z-30 h-[800px] w-[500px] rounded-xl bg-white">
-      <div className="flex flex-row items-center justify-between p-5">
+    <div className="fixed right-3 top-7 z-30 h-[900px] w-[500px] rounded-xl bg-white">
+      <div className="flex flex-row items-center justify-between p-5 px-10">
         <h1 className="text-left">Cart</h1>
         <RxCross2
           color="black"
