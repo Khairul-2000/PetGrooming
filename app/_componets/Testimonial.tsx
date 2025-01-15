@@ -78,7 +78,7 @@ const Testimonial = () => {
                 setIndex((prev) => (prev === 0 ? 1 : 0));
               }}
             >
-              <GoArrowLeft size={50} />
+              <GoArrowLeft size={50} className="animate-directionX" />
             </span>
             <span
               className="cursor-pointer"
@@ -86,7 +86,7 @@ const Testimonial = () => {
                 setIndex((prev) => (prev === 0 ? 1 : 0));
               }}
             >
-              <GoArrowRight size={50} />
+              <GoArrowRight size={50} className="animate-directionY" />
             </span>
           </div>
         </div>

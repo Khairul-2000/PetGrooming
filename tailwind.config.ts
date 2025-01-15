@@ -16,6 +16,22 @@ const config: Config = {
         serif: ["var(--font-fredoka)", "serif"],
         sans: ["var(--font-oswald)", "sans-serif"],
       },
+
+      keyframes: {
+        directionX: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(10%)" },
+        },
+        directionY: {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(-10%)" },
+        },
+      },
+
+      animation: {
+        directionX: "directionX 2s ease-in-out infinite",
+        directionY: "directionY 2s ease-in-out infinite",
+      },
     },
 
     screens: {
