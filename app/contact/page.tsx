@@ -20,6 +20,7 @@ const Contact = () => {
     message: "",
   });
   const [messageShow, setMessageShow] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -32,6 +33,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
     fetch("https://formspree.io/f/mrbbdqwr", {
       method: "POST",
@@ -149,7 +151,7 @@ const Contact = () => {
                 />
 
                 <button type="submit" className="btn text-2xl">
-                  Submit
+                  {loading ? <span>Please wait...</span> : <span>Submit</span>}
                 </button>
               </form>
             ) : (
