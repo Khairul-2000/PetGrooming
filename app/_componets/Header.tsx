@@ -7,6 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 import { motion } from "motion/react";
 import { Oswald } from "next/font/google";
 import { CartContext } from "../_context/CartContext";
+import Cart from "./Cart";
 
 export const oswald = Oswald({
   subsets: ["latin"],

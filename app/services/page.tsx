@@ -19,7 +19,7 @@ const Service = () => {
           </h1>
           -
           <div className="mx-auto my-12 flex flex-col flex-wrap items-center justify-center gap-8 xl:flex-row">
-            <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="z-10 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
               <div>
                 <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#a6c1e7]">
                   <CiHeart size={40} />
@@ -38,7 +38,7 @@ const Service = () => {
               </div>
             </div>
 
-            <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="z-10 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
               <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#fdcb6e]">
                 <FaBath size={40} />
               </div>
@@ -54,7 +54,7 @@ const Service = () => {
                 read more
               </Link>
             </div>
-            <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="z-10 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
               <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#ff6f61]">
                 <FiScissors color="white" size={40} />
               </div>
@@ -70,7 +70,7 @@ const Service = () => {
                 read more
               </Link>
             </div>
-            <div className="z-30 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
+            <div className="z-10 w-[550px] rounded-2xl bg-[#ffffff] p-6 transition-all duration-[1s] ease-in-out hover:-translate-y-2">
               <div className="my-8 flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[#ff6f61]">
                 <LiaDogSolid color="white" size={40} />
               </div>

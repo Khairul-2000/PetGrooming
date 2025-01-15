@@ -7,6 +7,8 @@ import { IoClose } from "react-icons/io5";
 import { oswald } from "./Header";
 import { CartContext } from "../_context/CartContext";
 import { motion } from "motion/react";
+import { revalidatePath } from "next/cache";
+import Cart from "./Cart";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -29,16 +31,21 @@ const Navbar = () => {
       text: "pricing",
     },
   ];
-  const { cart } = useContext(CartContext);
+  const { cart, setShowCart, showCart } = useContext(CartContext);
   return (
     <header
       className={`nav-link relative mx-[10px] ${oswald.variable} font-sans text-xl lg:mx-[120px]`}
     >
+      {showCart && <Cart />}
       <div className="mr-4 flex flex-row items-center justify-between p-5 pr-8">
         <ul className="hidden flex-row gap-4 lg:flex">
           {links.map((link, index) => (
             <div key={index} className="flex flex-row gap-3 hover:underline">
-              <Link href={link.href} key={index}>
+              <Link
+                href={link.href}
+                key={index}
+                onClick={() => revalidatePath(`${link.href}`)}
+              >
                 {link.text}
               </Link>
             </div>
@@ -102,7 +109,9 @@ const Navbar = () => {
           />
         </Link>
 
-        <p>{`Cart (${cart})`}</p>
+        <div onClick={() => setShowCart(true)} className="cursor-pointer">
+          {`Cart (${cart})`}
+        </div>
       </div>
 
       <nav

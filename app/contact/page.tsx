@@ -109,7 +109,7 @@ const Contact = () => {
               <CiLinkedin size={25} />
             </div>
           </div>
-          <div className="z-30 w-[500px] rounded-2xl bg-[#ffffff] p-10 shadow-lg transition-all duration-[0.8s] ease-in-out hover:shadow-black">
+          <div className="z-10 w-[500px] rounded-2xl bg-[#ffffff] p-10 shadow-lg transition-all duration-[0.8s] ease-in-out hover:shadow-black">
             {!messageShow ? (
               <form
                 onSubmit={handleSubmit}

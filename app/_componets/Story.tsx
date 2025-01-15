@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import Image from "next/image";
 import { images } from "../images/image";
 import Link from "next/link";
+import Section from "./Section";
 
 const Story = () => {
   return (
@@ -45,15 +46,17 @@ const Story = () => {
           height={300}
           className="absolute -right-36 -top-20 -z-10 xl:right-10"
         />
-        <div>
-          <Image
-            src={images[3].image}
-            alt="team"
-            width={700}
-            height={700}
-            className="z-30 rounded-3xl transition-all duration-[1s] ease-in-out hover:scale-110"
-          />
-        </div>
+        <Section>
+          <div>
+            <Image
+              src={images[3].image}
+              alt="team"
+              width={700}
+              height={700}
+              className="z-30 rounded-3xl transition-all duration-[1s] ease-in-out hover:scale-110"
+            />
+          </div>
+        </Section>
       </div>
     </div>
   );
