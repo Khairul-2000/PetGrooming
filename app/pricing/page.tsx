@@ -3,7 +3,6 @@
 import React from "react";
 import { GoCheck } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
-import { motion } from "framer-motion";
 
 const page = () => {
   return (

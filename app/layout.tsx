@@ -30,6 +30,7 @@ export default function RootLayout({
         <div>
           <CartContextContainer>
             <Navbar />
+
             <hr className="w-full" />
             <AnimatePresence>
               <main>{children}</main>
